@@ -1,7 +1,7 @@
 # MathBran
 is a specification for serializing typeset mathematical constructs.
 
-![](https://raw.githubusercontent.com/JohnDTill/MathBran/master/MathBran.svg "Cereal-ized math")
+![](./MathBran.svg "Cereal-ized math")
 
 For the most part MathBran uses standard unicode, but three symbols are overloaded to allow for typeset constructs. These are:
 * ⁜ - Construct symbol
@@ -46,7 +46,7 @@ f|Fraction|⁜f⏴Numerator⏵⏴Denominator⏵
 ⌊|Grouping Floor|⁜⌊⏴Text⏵
 ⟪|Grouping Double Angles|⁜⟪⏴Text⏵
 ⟦|Grouping Double Brackets|⁜⟦⏴Text⏵
-"|"|Grouping Bars|"⁜|⏴Text⏵"
+\||Grouping Bars|⁜\|⏴Text⏵
 ‖|Grouping Double Bars|⁜‖⏴Text⏵
 ┊|Grouping Eval Bar|⁜┊CLOSE⏴Text⏵
 ∫|Integral|⁜∫(⏴Subscript⏵(⏴Superscript⏵)?)?
