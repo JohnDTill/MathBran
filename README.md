@@ -1,7 +1,7 @@
 # MathBran
 is a specification for serializing typeset mathematical constructs.
 
-![](https://github.com/JohnDTill/MathBran/raw/master/MathBran.svg "Cereal-ized math")
+![](https://raw.githubusercontent.com/JohnDTill/MathBran/master/MathBran.svg "Cereal-ized math")
 
 For the most part MathBran uses standard unicode, but three symbols are overloaded to allow for typeset constructs. These are:
 * ⁜ - Construct symbol
@@ -16,4 +16,53 @@ Not every argument will be parsed as text. Some arguments contain information ab
 
 The construct codes and their usage are specified in the table below:
 
-![](https://github.com/JohnDTill/MathBran/raw/master/ConstructCodes.svg)
+Symbol|Description|Usage
+------|-----------|-----
+⁜|Construct Symbol|⁜⁜
+⏴|Open|⁜⏴
+⏵|Close|⁜⏵
+→|Accent Arrow|⁜→⏴Text⏵
+ā|Accent Bar|⁜ā⏴Text⏵
+ă|Accent Breve|⁜ă⏴Text⏵
+ȧ|Accent Dot|⁜ȧ⏴Text⏵
+ä|Accent Double Dots|⁜ä⏴Text⏵
+⋯|Accent Triple Dots|⁜⋯⏴Text⏵
+â|Accent Hat|⁜â⏴Text⏵
+ã|Accent Tilde|⁜ã⏴Text⏵
+∑|Summation|⁜∑(⏴Underscript⏵(⏴Overscript⏵)?)?
+∏|Product|⁜∏(⏴Underscript⏵(⏴Overscript⏵)?)?
+∐|Coproduct|⁜∐(⏴Underscript⏵(⏴Overscript⏵)?)?
+⋂|Intersection|⁜⋂(⏴Underscript⏵(⏴Overscript⏵)?)?
+⋃|Union|⁜⋃(⏴Underscript⏵(⏴Overscript⏵)?)?
+⨄|Union Plus|⁜⨄(⏴Underscript⏵(⏴Overscript⏵)?)?
+b|Binomial Coefficients|⁜b⏴Top⏵⏴Bottom⏵
+c|Cases|⁜c(⏴Value⏵⏴Condition⏵)+
+f|Fraction|⁜f⏴Numerator⏵⏴Denominator⏵
+(|Grouping Parenthesis|⁜(⏴Text⏵
+[|Grouping Brackets|⁜[⏴Text⏵
+{|Grouping Braces|⁜{⏴Text⏵
+⟨|Grouping Angles|⁜⟨⏴Text⏵
+⌈|Grouping Ceil|⁜⌈⏴Text⏵
+⌊|Grouping Floor|⁜⌊⏴Text⏵
+⟪|Grouping Double Angles|⁜⟪⏴Text⏵
+⟦|Grouping Double Brackets|⁜⟦⏴Text⏵
+"|"|Grouping Bars|"⁜|⏴Text⏵"
+‖|Grouping Double Bars|⁜‖⏴Text⏵
+┊|Grouping Eval Bar|⁜┊CLOSE⏴Text⏵
+∫|Integral|⁜∫(⏴Subscript⏵(⏴Superscript⏵)?)?
+∬|Double Integral|⁜∬(⏴Subscript⏵)?
+∭|Triple Integral|⁜∭(⏴Subscript⏵)?
+∮|Convolution Integral|⁜∮(⏴Subscript⏵(⏴Superscript⏵)?)?
+∯|Double Convolution Integral|⁜∯(⏴Subscript⏵)?
+∰|Triple Convolution Integral|⁜∰(⏴Subscript⏵)?
+⊞|Matrix|⁜⊞n((⏴Entry⏵)<n>)+
+√|Root|⁜√⏴Body⏵
+∛|Root Scripted|⁜∛⏴Body⏵⏴Script⏵
+_|Subscript|⁜_⏴Subscript⏵
+^|Superscript|⁜^⏴Superscript⏵
+Δ|Dualscript|⁜Δ⏴Subscript⏵⏴Superscript⏵
+l|Limit|⁜l⏴Text⏵⏴Approaching⏵
+↑|Underscripted max|⁜↑⏴Underscript⏵
+↓|Underscripted min|⁜↓⏴Underscript⏵
+↗ |Underscripted sup|⁜↗⏴Underscript⏵
+↘ |Underscripted inf|⁜↘⏴Underscript⏵
