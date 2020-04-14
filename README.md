@@ -1,7 +1,7 @@
 # MathBran
 is a specification for serializing typeset mathematical constructs.
 
-![](./MathBran.svg "Cereal-ized math")
+![](./MathBran.svg?raw=true "Cereal-ized math")
 
 For the most part MathBran uses standard unicode, but three symbols are overloaded to allow for typeset constructs. These are:
 * ⁜ - Construct symbol
