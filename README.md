@@ -48,7 +48,7 @@ f|Fraction|⁜f⏴Numerator⏵⏴Denominator⏵
 ⟦|Grouping Double Brackets|⁜⟦⏴Text⏵
 \||Grouping Bars|⁜\|⏴Text⏵
 ‖|Grouping Double Bars|⁜‖⏴Text⏵
-┊|Grouping Eval Bar|⁜┊CLOSE⏴Text⏵
+┊|Grouping Eval Bar|⁜┊⏴Text⏵
 ∫|Integral|⁜∫(⏴Subscript⏵(⏴Superscript⏵)?)?
 ∬|Double Integral|⁜∬(⏴Subscript⏵)?
 ∭|Triple Integral|⁜∭(⏴Subscript⏵)?
