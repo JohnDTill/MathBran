@@ -55,7 +55,7 @@ f|Fraction|⁜f⏴Numerator⏵⏴Denominator⏵
 ∮|Convolution Integral|⁜∮(⏴Subscript⏵(⏴Superscript⏵)?)?
 ∯|Double Convolution Integral|⁜∯(⏴Subscript⏵)?
 ∰|Triple Convolution Integral|⁜∰(⏴Subscript⏵)?
-⊞|Matrix|⁜⊞n((⏴Entry⏵)<n>)+
+⊞|Matrix|⁜⊞n((⏴Entry⏵)\<n\>)+
 √|Root|⁜√⏴Body⏵
 ∛|Root Scripted|⁜∛⏴Body⏵⏴Script⏵
 _|Subscript|⁜_⏴Subscript⏵
