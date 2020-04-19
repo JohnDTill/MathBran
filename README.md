@@ -48,7 +48,6 @@ f|Fraction|⁜f⏴Numerator⏵⏴Denominator⏵
 ⟦|Grouping Double Brackets|⁜⟦⏴Text⏵
 \||Grouping Bars|⁜\|⏴Text⏵
 ‖|Grouping Double Bars|⁜‖⏴Text⏵
-┊|Grouping Eval Bar|⁜┊⏴Text⏵
 ∫|Integral|⁜∫(⏴Subscript⏵(⏴Superscript⏵)?)?
 ∬|Double Integral|⁜∬(⏴Subscript⏵)?
 ∭|Triple Integral|⁜∭(⏴Subscript⏵)?
@@ -60,6 +59,7 @@ f|Fraction|⁜f⏴Numerator⏵⏴Denominator⏵
 _|Subscript|⁜_⏴Subscript⏵
 ^|Superscript|⁜^⏴Superscript⏵
 Δ|Dualscript|⁜Δ⏴Subscript⏵⏴Superscript⏵
+┊|Evalscript|⁜┊⏴Subscript⏵⏴Superscript⏵
 l|Limit|⁜l⏴Text⏵⏴Approaching⏵
 ↑|Underscripted max|⁜↑⏴Underscript⏵
 ↓|Underscripted min|⁜↓⏴Underscript⏵
