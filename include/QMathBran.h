@@ -72,25 +72,27 @@ static bool testInvalidCases(const QString& source, QString::size_type& curr){
 }
 
 static bool testInvalidMatrix(const QString& source, QString::size_type& curr){
+    if(++curr == source.size()) return true;
+    if(source[curr] != MB_OPEN) return true;
     QString::size_type dim_start = ++curr;
 
-    while(++curr < source.size()){
-        if(source[curr] == MB_OPEN){
-            bool interpret_as_uint;
-            uint cols = source.mid(dim_start, curr - dim_start).toUInt(&interpret_as_uint);
-            if(!interpret_as_uint) return true;
-            curr--;
+    while(++curr < source.size() && source[curr] != MB_CLOSE);
+    if(curr == source.size()) return true;
+    bool success;
+    ushort rows = source.midRef(dim_start, curr - dim_start).toUShort(&success);
+    if(!success || rows==0 || rows > 255) return true;
 
-            do
-                for(uint i = cols; i > 0; i--)
-                    if(testInvalidConstruct(source, curr)) return true;
-            while(curr+1 < source.size() && source[curr+1] == MB_OPEN);
+    if(++curr == source.size()) return true;
+    if(source[curr] != MB_OPEN) return true;
+    while(++curr < source.size() && source[curr] != MB_CLOSE);
+    if(curr == source.size()) return true;
+    ushort cols = source.midRef(dim_start, curr - dim_start).toUShort(&success);
+    if(!success || cols==0 || cols > 255) return true;
 
-            return false;
-        }
-    }
+    for(ushort i = rows*cols; i > 0; i--)
+        if(testInvalidSubphrase(source, curr)) return true;
 
-    return true;
+    return false;
 }
 
 static bool testInvalidConstruct(const QString& source, QString::size_type& curr){
