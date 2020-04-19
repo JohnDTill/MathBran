@@ -122,7 +122,6 @@ static bool testInvalidConstruct(const QString& source, QString::size_type& curr
         case MB_USHORT_GROUPING_CEIL:
         case MB_USHORT_GROUPING_EVAL_BAR:
         case MB_USHORT_GROUPING_FLOOR:
-        case MB_USHORT_ROOT:
         case MB_USHORT_SUBSCRIPT:
         case MB_USHORT_SUPERSCRIPT:
         case MB_USHORT_UNDERSCRIPTED_INF:
@@ -136,7 +135,6 @@ static bool testInvalidConstruct(const QString& source, QString::size_type& curr
         case MB_USHORT_DUALSCRIPT:
         case MB_USHORT_FRACTION:
         case MB_USHORT_LIMIT:
-        case MB_USHORT_ROOT_SCRIPTED:
             return testInvalidConstruct(source, curr) || testInvalidConstruct(source, curr);
 
         //Optional unary constructs
@@ -158,6 +156,8 @@ static bool testInvalidConstruct(const QString& source, QString::size_type& curr
             return testInvalidOptionalSubphrase(source, curr) || testInvalidOptionalSubphrase(source, curr);
 
         //Unique constructs
+        case MB_USHORT_ROOT: return testInvalidSubphrase(source, curr) ||
+                                    testInvalidOptionalSubphrase(source, curr);
         case MB_USHORT_CASES: return testInvalidCases(source, curr);
         case MB_USHORT_MATRIX: return testInvalidMatrix(source, curr);
 

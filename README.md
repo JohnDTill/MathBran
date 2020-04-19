@@ -56,13 +56,12 @@ f|Fraction|⁜f⏴Numerator⏵⏴Denominator⏵
 ∯|Double Convolution Integral|⁜∯(⏴Subscript⏵)?
 ∰|Triple Convolution Integral|⁜∰(⏴Subscript⏵)?
 ⊞|Matrix|⁜⊞n((⏴Entry⏵)\<n\>)+
-√|Root|⁜√⏴Body⏵
-∛|Root Scripted|⁜∛⏴Body⏵⏴Script⏵
+√|Root|⁜√⏴Body⏵(⏴Script⏵)?
 _|Subscript|⁜_⏴Subscript⏵
 ^|Superscript|⁜^⏴Superscript⏵
 Δ|Dualscript|⁜Δ⏴Subscript⏵⏴Superscript⏵
 l|Limit|⁜l⏴Text⏵⏴Approaching⏵
 ↑|Underscripted max|⁜↑⏴Underscript⏵
 ↓|Underscripted min|⁜↓⏴Underscript⏵
-↗ |Underscripted sup|⁜↗⏴Underscript⏵
-↘ |Underscripted inf|⁜↘⏴Underscript⏵
+↗|Underscripted sup|⁜↗⏴Underscript⏵
+↘|Underscripted inf|⁜↘⏴Underscript⏵
