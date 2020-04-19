@@ -114,13 +114,9 @@ static bool testInvalidConstruct(const QString& source, QString::size_type& curr
         case MB_USHORT_ACCENT_TRIPLE_DOTS:
         case MB_USHORT_ACCENT_HAT:
         case MB_USHORT_ACCENT_TILDE:
-        case MB_USHORT_GROUPING_ANGLES:
-        case MB_USHORT_GROUPING_DOUBLE_ANGLES:
         case MB_USHORT_GROUPING_BARS:
         case MB_USHORT_GROUPING_DOUBLE_BARS:
-        case MB_USHORT_GROUPING_BRACES:
         case MB_USHORT_GROUPING_BRACKETS:
-        case MB_USHORT_GROUPING_DOUBLE_BRACKETS:
         case MB_USHORT_GROUPING_CEIL:
         case MB_USHORT_GROUPING_FLOOR:
         case MB_USHORT_SUBSCRIPT:

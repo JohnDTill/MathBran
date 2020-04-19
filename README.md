@@ -40,12 +40,8 @@ c|Cases|⁜c(⏴Value⏵⏴Condition⏵)+
 f|Fraction|⁜f⏴Numerator⏵⏴Denominator⏵
 (|Grouping Parenthesis|⁜(⏴Text⏵
 [|Grouping Brackets|⁜[⏴Text⏵
-{|Grouping Braces|⁜{⏴Text⏵
-⟨|Grouping Angles|⁜⟨⏴Text⏵
 ⌈|Grouping Ceil|⁜⌈⏴Text⏵
 ⌊|Grouping Floor|⁜⌊⏴Text⏵
-⟪|Grouping Double Angles|⁜⟪⏴Text⏵
-⟦|Grouping Double Brackets|⁜⟦⏴Text⏵
 \||Grouping Bars|⁜\|⏴Text⏵
 ‖|Grouping Double Bars|⁜‖⏴Text⏵
 ∫|Integral|⁜∫(⏴Subscript⏵(⏴Superscript⏵)?)?
