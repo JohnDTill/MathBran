@@ -61,3 +61,5 @@ l|Limit|⁜l⏴Text⏵⏴Approaching⏵
 ↓|Underscripted min|⁜↓⏴Underscript⏵
 ↗|Underscripted sup|⁜↗⏴Underscript⏵
 ↘|Underscripted inf|⁜↘⏴Underscript⏵
+
+For an example of what the MathBran specification can enable, check out the [YAWYSIWYGEE editor demo](https://johndtill.github.io/YAWYSIWYGEE_WASM/).
