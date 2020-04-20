@@ -47,9 +47,9 @@ f|Fraction|⁜f⏴Numerator⏵⏴Denominator⏵
 ∫|Integral|⁜∫(⏴Subscript⏵(⏴Superscript⏵)?)?
 ∬|Double Integral|⁜∬(⏴Subscript⏵)?
 ∭|Triple Integral|⁜∭(⏴Subscript⏵)?
-∮|Convolution Integral|⁜∮(⏴Subscript⏵(⏴Superscript⏵)?)?
-∯|Double Convolution Integral|⁜∯(⏴Subscript⏵)?
-∰|Triple Convolution Integral|⁜∰(⏴Subscript⏵)?
+∮|Contour Integral|⁜∮(⏴Subscript⏵(⏴Superscript⏵)?)?
+∯|Closed Surface Integral|⁜∯(⏴Subscript⏵)?
+∰|Closed Volume Integral|⁜∰(⏴Subscript⏵)?
 ⊞|Matrix|⁜⊞⏴r⏵⏴c⏵(⏴Entry⏵)\<r×c\>   r,c ∈ ⟦1, 255⟧
 √|Root|⁜√⏴Body⏵(⏴Script⏵)?
 _|Subscript|⁜_⏴Subscript⏵
