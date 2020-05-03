@@ -89,6 +89,8 @@ static bool testInvalidMatrix(const QString& source, QString::size_type& curr){
     ushort cols = source.midRef(dim_start, curr - dim_start).toUShort(&success);
     if(!success || cols==0 || cols > 255) return true;
 
+    if(curr+1 == source.size() || source[curr+1] != MB_OPEN) return false; //Elements are optional
+
     for(ushort i = rows*cols; i > 0; i--)
         if(testInvalidSubphrase(source, curr)) return true;
 
