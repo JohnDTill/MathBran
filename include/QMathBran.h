@@ -60,12 +60,12 @@ static bool testInvalidSubphrase(const QString& source, QString::size_type& curr
 static bool testInvalidOptionalSubphrase(const QString& source, QString::size_type& curr){
     return curr+1 < source.size() &&
            source[curr+1] == MB_OPEN &&
-           testInvalidConstruct(source, curr);
+           testInvalidSubphrase(source, curr);
 }
 
 static bool testInvalidCases(const QString& source, QString::size_type& curr){
     do
-        if(testInvalidConstruct(source, curr) || testInvalidConstruct(source, curr)) return true;
+        if(testInvalidSubphrase(source, curr) || testInvalidSubphrase(source, curr)) return true;
     while(curr+1 < source.size() && source[curr+1] == MB_OPEN);
 
     return false;
@@ -75,7 +75,6 @@ static bool testInvalidMatrix(const QString& source, QString::size_type& curr){
     if(++curr == source.size()) return true;
     if(source[curr] != MB_OPEN) return true;
     QString::size_type dim_start = ++curr;
-
     while(++curr < source.size() && source[curr] != MB_CLOSE);
     if(curr == source.size()) return true;
     bool success;
@@ -84,6 +83,7 @@ static bool testInvalidMatrix(const QString& source, QString::size_type& curr){
 
     if(++curr == source.size()) return true;
     if(source[curr] != MB_OPEN) return true;
+    dim_start = ++curr;
     while(++curr < source.size() && source[curr] != MB_CLOSE);
     if(curr == source.size()) return true;
     ushort cols = source.midRef(dim_start, curr - dim_start).toUShort(&success);
@@ -119,6 +119,7 @@ static bool testInvalidConstruct(const QString& source, QString::size_type& curr
         case MB_USHORT_GROUPING_BRACKETS:
         case MB_USHORT_GROUPING_CEIL:
         case MB_USHORT_GROUPING_FLOOR:
+        case MB_USHORT_GROUPING_PARENTHESIS:
         case MB_USHORT_SUBSCRIPT:
         case MB_USHORT_SUPERSCRIPT:
         case MB_USHORT_UNDERSCRIPTED_INF:
@@ -133,13 +134,13 @@ static bool testInvalidConstruct(const QString& source, QString::size_type& curr
         case MB_USHORT_EVALSCRIPT:
         case MB_USHORT_FRACTION:
         case MB_USHORT_LIMIT:
-            return testInvalidConstruct(source, curr) || testInvalidConstruct(source, curr);
+            return testInvalidSubphrase(source, curr) || testInvalidSubphrase(source, curr);
 
         //Optional unary constructs
         case MB_USHORT_DOUBLE_INTEGRAL:
         case MB_USHORT_TRIPLE_INTEGRAL:
-        case MB_USHORT_DOUBLE_CONVOLUTION_INTEGRAL:
-        case MB_USHORT_TRIPLE_CONVOLUTION_INTEGRAL:
+        case MB_USHORT_CLOSED_SURFACE_INTEGRAL:
+        case MB_USHORT_CLOSED_VOLUME_INTEGRAL:
             return testInvalidOptionalSubphrase(source, curr);
 
         //Distinctly optional binary constructs
@@ -150,7 +151,7 @@ static bool testInvalidConstruct(const QString& source, QString::size_type& curr
         case MB_USHORT_UNION:
         case MB_USHORT_UNION_PLUS:
         case MB_USHORT_INTEGRAL:
-        case MB_USHORT_CONVOLUTION_INTEGRAL:
+        case MB_USHORT_CONTOUR_INTEGRAL:
             return testInvalidOptionalSubphrase(source, curr) || testInvalidOptionalSubphrase(source, curr);
 
         //Unique constructs
