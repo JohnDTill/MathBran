@@ -13,7 +13,7 @@ void skipHeader(QFile& table_file){
     line += 2;
 }
 
-int main(int, char**){
+int generateQtHeaders(){
     //Open files
     QFile table_file(":/ConstructCodes.csv");
     if(!table_file.open(QIODevice::ReadOnly)){
