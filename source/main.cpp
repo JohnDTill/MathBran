@@ -1,6 +1,7 @@
 #include "Script_GenerateQtHeaders.h"
 #include "Script_GenerateSymbols.h"
 #include "Script_GenerateKeywords.h"
+#include "Script_GenerateUnicodeScriptMaps.h"
 
 int main(int, char**){
     generateQtHeaders();
@@ -21,4 +22,6 @@ int main(int, char**){
     generateKeywords(out);
     generateSymbols(out);
     file.close();
+
+    generateUnicodeMacros();
 }
