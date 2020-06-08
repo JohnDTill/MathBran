@@ -42,9 +42,28 @@ int generateSymbols(QTextStream& out){
     for(SymbolEntry e : rows){
         if(e.symbol.front() == 55349) continue; //'�'
         out << "    case " << e.symbol.front().unicode() << ":\\\n"
-               "        out << \"\\\\" << e.command << "\";\\\n"
-               "        if(curr < source.size() && isLetter(source[curr])) out << \"{}\";\\\n"
-               "        break;\\\n";
+               "        out << \"\\\\" << e.command << "\";\\\n";
+
+        QChar c = e.command.front();
+        if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+            out << "        if(curr < source.size() && isLetter(source[curr])) out << \"{}\";\\\n";
+
+        out << "        break;\\\n";
+    }
+    out << "\n";
+
+    out << "#define MATHBRAN_LATEX_SYMBOLS_32BIT \\\n";
+
+    for(SymbolEntry e : rows){
+        if(e.symbol.front() != 55349) continue; //'�'
+        out << "    case " << e.symbol.back().unicode() << ":\\\n"
+               "        out << \"\\\\" << e.command << "\";\\\n";
+
+        QChar c = e.command.front();
+        if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+            out << "        if(curr < source.size() && isLetter(source[curr])) out << \"{}\";\\\n";
+
+        out << "        break;\\\n";
     }
     out << "\n";
 
